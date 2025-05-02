@@ -1,0 +1,590 @@
+:root {
+  --fallback-font-stack: Helvetica, Arial, serif;
+}
+
+*{
+  scroll-behavior: smooth;
+}
+
+
+/* Sidebar styling */
+.sidebar {
+  height: 100%;
+  width: 250px; /* default open width */
+  position: fixed;
+  z-index: 999;
+  top: 0;
+  left: 0;
+  background-color: #FAF3E0;
+  box-shadow: 5px 0 15px rgba(0, 0, 0, 0.2);
+  overflow-x: hidden;
+  transition: width 0.3s ease;
+  padding: 80px 20px 20px 30px;
+  display: flex;
+  flex-direction: column;
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+
+/* Sidebar hidden (default off) */
+.sidebar.closed {
+  width: 0;
+  padding: 80px 0 20px 0;
+}
+
+/* Link di sidebar */
+.sidebar a {
+  font-size: 20px;
+  margin: 15px 0;
+  color: #3E3E3E;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s ease;
+}
+
+.sidebar a:hover {
+  color: #A98467;
+}
+
+/* Tombol close */
+.sidebar .closebtn {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  font-size: 30px;
+  color: #3E3E3E;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Tombol hamburger */
+.openbtn {
+  font-size: 28px;
+  cursor: pointer;
+  background-color: transparent;
+  color: #3E3E3E;
+  padding: 10px 15px;
+  border: none;
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  z-index: 1000;
+}
+
+/* Responsive tweak for small devices */
+@media (max-width: 320px) {
+  .sidebar {
+    width: 200px;
+    padding-left: 20px;
+  }
+
+  .sidebar a {
+    font-size: 18px;
+  }
+
+  .openbtn {
+    font-size: 24px;
+  }
+
+  .sidebar .closebtn {
+    font-size: 26px;
+  }
+}
+
+
+
+.logo {
+  font-size: 35px;
+  color: yellow;
+  text-decoration: none;
+  font-weight: 700;
+  text-shadow: 0 0 35px yellow, 0 0 40px yellow;
+  transition: 500ms ease-in;
+  margin: 0 auto;
+  display: block; /* atau flex container-nya pake justify-content */
+  /* posisi aman */
+  margin-left: 30px;
+  padding-top: 40px; /* tambah ini untuk ngasih jarak dari atas */
+  display: inline-block; /* biar padding bisa bekerja dengan baik */
+}
+
+
+.revisi2.main {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  background-color: #faf3e0;
+  overflow: hidden;
+  justify-content: center; /* Pastikan konten terpusat */
+  align-items: center;
+}
+.revisi2 .home {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1440px; /* Maksimal lebar untuk besar layar */
+  margin: 0 auto;
+  padding: 0 20px; /* Pastikan ada sedikit padding di samping */
+}
+
+.revisi2 .home1 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  margin: 150px auto 228px;
+  width: 790px;
+  min-height: 585px;
+}
+
+@media (min-width: 1920px) and (max-width: 99999px) {
+  .revisi2 .home1 {
+    margin: 150px 545px 228px;
+    width: 3000px;
+  }
+}
+@media (min-width: 1920px) and (max-width: 2999px) {
+  .revisi2 .home1 {
+    margin: 150px 460px 228px;
+    width: 1000px;
+  }
+}
+@media (max-width: 1399px) {
+  .revisi2 .home1 {
+    margin: 80px 275px 228px;
+    width: 750px;
+  }
+}
+@media (max-width: 1199px) {
+  .revisi2 .home1 {
+    z-index: 0;
+    margin: 212px auto 228px;
+    padding-right: 0;
+    border-left-width: 0;
+    border-right-width: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .revisi2 .home1 {
+    width: 500px;
+  }
+}
+@media (max-width: 767px) {
+  .revisi2 .home1 {
+    margin: 212px 100px 228px;
+  }
+}
+@media (max-width: 575px) {
+  .revisi2 .home1 {
+    margin: 25px 35px 228px;
+  }
+}
+@media (max-width: 479px) {
+  .revisi2 .home1 {
+    margin: 25px 17px 228px;
+    width: 380px;
+  }
+}
+@media (max-width: 383px) {
+  .revisi2 .home1 {
+    margin: 25px 12px 228px;
+    width: 351px;
+  }
+}
+.revisi2 .lbl1_box {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+}
+@media (min-width: 1920px) and (max-width: 99999px) {
+  .revisi2 .lbl1_box {
+    top: 130px;
+  }
+}
+@media (max-width: 1199px) {
+  .revisi2 .lbl1_box {
+    right: 0;
+  }
+}
+@media (max-width: 991px) {
+  .revisi2 .lbl1_box {
+    top: 75px;
+    align-items: flex-start;
+    height: 30%;
+  }
+}
+@media (max-width: 575px) {
+  .revisi2 .lbl1_box {
+    top: 90px;
+  }
+}
+@media (max-width: 479px) {
+  .revisi2 .lbl1_box {
+    top: 160px;
+  }
+}
+.revisi2 .lbl1 {
+  font: 700 96px/1.21 Montserrat, Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  text-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 991px) {
+  .revisi2 .lbl1 {
+    font-size: 75px;
+  }
+}
+@media (max-width: 575px) {
+  .revisi2 .lbl1 {
+    font-size: 60px;
+  }
+}
+@media (max-width: 479px) {
+  .revisi2 .lbl1 {
+    font-size: 40px;
+  }
+}
+.revisi2 .lbl1_span0 {
+  font: 700 1em/1.22 Montserrat, Helvetica, Arial, serif;
+  color: #3e3e3e;
+}
+.revisi2 .lbl1_span1 {
+  font: 700 0.3333333333em/1.22 Montserrat, Helvetica, Arial, serif;
+  color: white;
+}
+.revisi2 .lbl1_span2 {
+  font: 0.3333333333em/1.22 Montserrat, Helvetica, Arial, serif;
+  color: white;
+}
+.revisi2 .lbl2 {
+  position: absolute;
+  bottom: 239px;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  height: 78px;
+  font: 32px/1.22 Montserrat, Helvetica, Arial, serif;
+  color: #3e3e3e;
+  text-align: center;
+}
+@media (min-width: 1920px) and (max-width: 2999px) {
+  .revisi2 .lbl2 {
+    bottom: 150px;
+  }
+}
+@media (max-width: 991px) {
+  .revisi2 .lbl2 {
+    align-items: flex-start;
+    font-size: 22px;
+  }
+}
+@media (max-width: 575px) {
+  .revisi2 .lbl2 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 479px) {
+  .revisi2 .lbl2 {
+    font-size: 15px;
+  }
+}
+.revisi2 .btnGas {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  margin: 402px 0 123px;
+  width: 790px;
+  font: 800 20px/1.2 Montserrat, Helvetica, Arial, serif;
+  color: #3e3e3e;
+  text-align: center;
+  background-color: #c8b6a6;
+  padding: 18px 8px;
+  border-radius: 25px;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+@media (min-width: 1920px) and (max-width: 99999px) {
+  .revisi2 .btnGas {
+    margin: 402px 0 123px 1150px;
+  }
+}
+@media (min-width: 1920px) and (max-width: 2999px) {
+  .revisi2 .btnGas {
+    margin: 480px 0 123px 100px;
+  }
+}
+@media (max-width: 1399px) {
+  .revisi2 .btnGas {
+    width: 750px;
+  }
+}
+@media (max-width: 991px) {
+  .revisi2 .btnGas {
+    margin: 360px 0 123px;
+    width: 500px;
+  }
+}
+@media (max-width: 575px) {
+  .revisi2 .btnGas {
+    align-items: flex-start;
+    font-size: 18px;
+  }
+}
+@media (max-width: 479px) {
+  .revisi2 .btnGas {
+    width: 380px;
+    font-size: 15px;
+  }
+}
+@media (max-width: 383px) {
+  .revisi2 .btnGas {
+    width: 350px;
+  }
+}
+.revisi2 .btnGas:hover {
+  transform: scale(1.1);
+}
+
+.revisi2 .howTo {
+  display: flex;
+  flex-direction: column;
+  margin: 150px 0 150px; /* Ubah nilai margin jadi seimbang */
+}
+
+@media (max-width: 991px) {
+  .revisi2 .howTo {
+    margin: 100px 0;
+  }
+}
+
+@media (max-width: 575px) {
+  .revisi2 .howTo {
+    margin: 80px 0;
+  }
+}
+
+@media (max-width: 383px) {
+  .revisi2 .howTo {
+    margin: 60px 0;
+  }
+}
+
+.revisi2 .howto {
+  display: flex;
+  flex-direction: column;
+  row-gap: 0;
+  margin: 36px auto 140px;
+  width: 860px;
+  max-width: 85%;
+}
+@media (max-width: 575px) {
+  .revisi2 .howto {
+    position: relative;
+    margin: 36px auto 80px;
+  }
+}
+@media (max-width: 383px) {
+  .revisi2 .howto {
+    margin: 36px auto 50px;
+  }
+}
+.revisi2 .judul {
+  display: flex;
+  justify-content: center;
+  font: 700 48px/1.23 Montserrat, Helvetica, Arial, serif;
+  color: #3e3e3e;
+  text-align: center;
+  text-shadow: 15px 10px 10px rgba(0, 0, 0, 0.25);
+}
+@media (max-width: 991px) {
+  .revisi2 .judul {
+    align-items: flex-start;
+    font-size: 44px;
+  }
+}
+@media (max-width: 479px) {
+  .revisi2 .judul {
+    font-size: 36px;
+  }
+}
+.revisi2 .step-hapus {
+  display: flex;
+  flex-direction: column;
+  row-gap: 40px;
+  margin: 46px 0 0;
+}
+.revisi2 .info1 {
+  display: flex;
+  justify-content: center;
+  font: 700 32px/1.22 Montserrat, Helvetica, Arial, serif;
+  color: #c8b6a6;
+  text-align: center;
+}
+@media (max-width: 991px) {
+  .revisi2 .info1 {
+    align-items: flex-start;
+    font-size: 30px;
+  }
+}
+@media (max-width: 479px) {
+  .revisi2 .info1 {
+    font-size: 26px;
+  }
+}
+.revisi2 .desc {
+  font: 28px/1.21 Montserrat, Helvetica, Arial, serif;
+  color: #3e3e3e;
+}
+@media (max-width: 991px) {
+  .revisi2 .desc {
+    align-items: flex-start;
+    font-size: 26px;
+  }
+}
+@media (max-width: 479px) {
+  .revisi2 .desc {
+    font-size: 22px;
+  }
+}
+.revisi2 .step-tambah {
+  display: flex;
+  flex-direction: column;
+  row-gap: 46px;
+  margin: 70px 0 0;
+}
+@media (max-width: 383px) {
+  .revisi2 .step-tambah {
+    position: relative;
+    margin: 50px 0 0;
+  }
+}
+
+/* Container utama */
+#Feedback {
+  font: 700 1em/1.22 Montserrat, Helvetica, Arial, serif;
+  min-height: 100vh; /* Menggunakan tinggi viewport penuh */
+  display: flex;
+  align-items: center;
+  justify-content: center; /* Menempatkan konten di tengah */
+  flex-direction: column;
+  padding: 20px;
+  background-color: #faf3e0; /* Warna disamakan dengan elemen lainnya */
+  margin: 0;
+  box-sizing: border-box; /* Memastikan padding termasuk dalam tinggi */
+}
+
+/* Judul dalam feedback box */
+.feedback-box h1 {
+  font: 700 96px/1.21 Montserrat, Helvetica, Arial, serif;
+  color: black;
+  text-align: center;
+  text-shadow: 15px 15px 10px rgba(0, 0, 0, 0.25);
+  margin-bottom: 20px;
+  color: #3e3e3e; /* Warna teks sesuai elemen lainnya */
+}
+
+/* Input field styling */
+.feedback-box input {
+  width: 100%;
+  max-width: 600px;
+  height: 50px;
+  padding: 0 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #c8b6a6; /* Border sesuai tema warna */
+  background-color: #EEEEEE;
+  color: #3e3e3e ;/* Warna teks */
+  box-sizing: border-box;
+}
+.feedback-box input:focus {
+  border: 1px solid #00ADB5;
+  outline: none;
+}
+
+/* Textarea styling */
+.feedback-box textarea {
+  width: 100%;
+  max-width: 600px;
+  height: 150px;
+  padding: 15px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+  border: 1px solid #c8b6a6;
+  background-color: #EEEEEE;
+  color: #222831;
+  box-sizing: border-box;
+}
+.feedback-box textarea:focus {
+  border: 1px solid #c8b6a6;
+  outline: none;
+}
+
+/* Tombol styling */
+.feedback-box button {
+  border: none;
+  padding: 10px 20px;
+  background-color: #c8b6a6; /* Warna tombol sesuai tema */
+  font-size: 16px;
+  border-radius: 5px;
+  color: #3e3e3e; /* Warna teks tombol */
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+.feedback-box button:hover {
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+  transform: scale(1.1);
+}
+
+/* Responsiveness */
+/* Responsiveness tetap */
+@media (max-width: 768px) {
+  #Feedback {
+    padding: 15px;
+  }
+  .feedback-box h1 {
+    font-size: 24px;
+  }
+  .feedback-box input, .feedback-box textarea {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  #Feedback {
+    padding: 10px;
+  }
+  .feedback-box h1 {
+    font-size: 20px;
+  }
+  .feedback-box button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}
+
+@media (max-width: 768px) {
+  .feedback-box h1 {
+    font-size: 24px;
+  }
+  .feedback-box input, .feedback-box textarea {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .feedback-box h1 {
+    font-size: 20px;
+  }
+  .feedback-box button {
+    font-size: 14px;
+    padding: 10px 15px;
+  }
+}

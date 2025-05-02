@@ -1,0 +1,327 @@
+@use "utils" as *;
+@use "global" as *;
+
+.revisi2 {
+  &.main {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    background-color: rgb(250 243 224);
+    overflow: hidden;
+  }
+
+  .home {
+    display: flex;
+    flex-direction: column;
+    width: 1440px;
+    height: 1025px;
+    min-height: 1025px;
+  }
+
+  .home1 {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    margin: 150px 325px 228px;
+    width: 790px;
+    height: 585px;
+    min-height: 585px;
+
+    @include mq-between(xxl, max) {
+      margin: 150px 545px 228px;
+      width: 3000px;
+    }
+
+    @include mq-between(xxl, xxxl) {
+      margin: 150px 460px 228px;
+      width: 1000px;
+    }
+
+    @include xl {
+      margin: 80px 275px 228px;
+      width: 750px;
+    }
+
+    @include lg {
+      z-index: 0;
+      margin: 212px 150px 228px;
+      padding-right: 0;
+      border-left-width: 0;
+      border-right-width: 0;
+    }
+
+    @include md {
+      width: 500px;
+    }
+
+    @include sm {
+      margin: 212px 100px 228px;
+    }
+
+    @include xs {
+      margin: 25px 35px 228px;
+    }
+
+    @include xxs {
+      margin: 25px 17px 228px;
+      width: 380px;
+    }
+
+    @include tn {
+      margin: 25px 12px 228px;
+      width: 351px;
+    }
+  }
+
+  .lbl1_box {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
+
+    @include mq-between(xxl, max) {
+      top: 130px;
+    }
+
+    @include lg {
+      right: 0;
+    }
+
+    @include md {
+      top: 75px;
+      align-items: flex-start;
+      height: 30%;
+    }
+
+    @include xs {
+      top: 90px;
+    }
+
+    @include xxs {
+      top: 160px;
+    }
+  }
+
+  .lbl1 {
+    font: 700 96px/1.21 Montserrat, Helvetica, Arial, serif;
+    color: rgb(0 0 0);
+    text-align: center;
+    text-shadow: 15px 15px 10px rgb(0 0 0 / 25%);
+
+    @include md {
+      font-size: 75px;
+    }
+
+    @include xs {
+      font-size: 60px;
+    }
+
+    @include xxs {
+      font-size: 40px;
+    }
+  }
+
+  .lbl1_span0 {
+    font: 700 1em/1.22 Montserrat, Helvetica, Arial, serif;
+    color: rgb(62 62 62);
+  }
+
+  .lbl1_span1 {
+    font: 700 0.3333333333333333em/1.22 Montserrat, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .lbl1_span2 {
+    font: 0.3333333333333333em/1.22 Montserrat, Helvetica, Arial, serif;
+    color: rgb(255 255 255);
+  }
+
+  .lbl2 {
+    position: absolute;
+    bottom: 239px;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 78px;
+    font: 32px/1.22 Montserrat, Helvetica, Arial, serif;
+    color: rgb(62 62 62);
+    text-align: center;
+
+    @include mq-between(xxl, xxxl) {
+      bottom: 150px;
+    }
+
+    @include md {
+      align-items: flex-start;
+      font-size: 22px;
+    }
+
+    @include xs {
+      font-size: 18px;
+    }
+
+    @include xxs {
+      font-size: 15px;
+    }
+  }
+
+  .btnGas {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    margin: 402px 0 123px;
+    width: 790px;
+    font: 800 20px/1.2 Montserrat, Helvetica, Arial, serif;
+    color: rgb(62 62 62);
+    text-align: center;
+    background-color: rgb(200 182 166);
+    padding: 18px 8px;
+    border-radius: 25px;
+    transition-duration: 0.3s;
+    transition-property: transform;
+
+    @include mq-between(xxl, max) {
+      margin: 402px 0 123px 1150px;
+    }
+
+    @include mq-between(xxl, xxxl) {
+      margin: 480px 0 123px 100px;
+    }
+
+    @include xl {
+      width: 750px;
+    }
+
+    @include md {
+      margin: 360px 0 123px;
+      width: 500px;
+    }
+
+    @include xs {
+      align-items: flex-start;
+      font-size: 18px;
+    }
+
+    @include xxs {
+      width: 380px;
+      font-size: 15px;
+    }
+
+    @include tn {
+      width: 350px;
+    }
+  }
+
+  .btnGas:hover {
+    transform: scale(1.1);
+  }
+
+  .howTo {
+    display: flex;
+    flex-direction: column;
+    margin: 0 0 1022px;
+
+    @include md {
+      position: relative;
+      margin: 0 0 150px;
+    }
+
+    @include xs {
+      margin: 0 0 80px;
+    }
+
+    @include tn {
+      margin: 0 0 50px;
+    }
+  }
+
+  .howto {
+    display: flex;
+    flex-direction: column;
+    row-gap: 0;
+    margin: 36px auto 140px;
+    width: 860px;
+    max-width: 85%;
+
+    @include xs {
+      position: relative;
+      margin: 36px auto 80px;
+    }
+
+    @include tn {
+      margin: 36px auto 50px;
+    }
+  }
+
+  .judul {
+    display: flex;
+    justify-content: center;
+    font: 700 48px/1.23 Montserrat, Helvetica, Arial, serif;
+    color: rgb(62 62 62);
+    text-align: center;
+    text-shadow: 15px 10px 10px rgb(0 0 0 / 25%);
+
+    @include md {
+      align-items: flex-start;
+      font-size: 44px;
+    }
+
+    @include xxs {
+      font-size: 36px;
+    }
+  }
+
+  .step-hapus {
+    display: flex;
+    flex-direction: column;
+    row-gap: 40px;
+    margin: 46px 0 0;
+  }
+
+  .info1 {
+    display: flex;
+    justify-content: center;
+    font: 700 32px/1.22 Montserrat, Helvetica, Arial, serif;
+    color: rgb(200 182 166);
+    text-align: center;
+
+    @include md {
+      align-items: flex-start;
+      font-size: 30px;
+    }
+
+    @include xxs {
+      font-size: 26px;
+    }
+  }
+
+  .desc {
+    font: 28px/1.21 Montserrat, Helvetica, Arial, serif;
+    color: rgb(62 62 62);
+
+    @include md {
+      align-items: flex-start;
+      font-size: 26px;
+    }
+
+    @include xxs {
+      font-size: 22px;
+    }
+  }
+
+  .step-tambah {
+    display: flex;
+    flex-direction: column;
+    row-gap: 46px;
+    margin: 70px 0 0;
+
+    @include tn {
+      position: relative;
+      margin: 50px 0 0;
+    }
+  }
+}
